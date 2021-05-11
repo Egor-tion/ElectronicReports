@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="./css/registration.css">
+    <script src="./js/registration.js"></script>
+</head>
+
+<body>
+
+    <header> 
+        <div class="name_page">Форма регистрации пользователя</div>
+        <div class="header_list">
+        <a href="#" class="header_link">Выход</a>
+    </div>
+    </header>
+
+    <form id="form" action="../backend/check0.php" method="post" accept-charset="utf-8">
+        <fieldset>
+            <p>
+                <label>Login</label>
+                <input type="text" id="login" name="login" placeholder="Введите логин" maxlength="30" autocomplete="off" autofocus required>
+            </p>    
+            
+            <p>
+                <label>Password</label>
+                <input type="text" id="password" name="password" placeholder="Введите пароль" maxlength="30" autocomplete="off" autofocus required>
+            </p>
+                
+            <p>
+                <label>Имя</label>
+                <input type="text" pattern="[A-Za-zА-Яа-яЁё]{1,20}" id="name" name="name" placeholder="Введите имя" maxlength="30" autocomplete="off" autofocus required> <br>     
+            </p>
+
+            <p>
+                <label>Фамилия</label>
+                <input type="text" pattern="[A-Za-zА-Яа-яЁё]{1,20}" id="surname" name="surname" placeholder="Введите фамилию" maxlength="50" autocomplete="off" required> <br>
+            </p>
+                
+            <p>
+                <label>Отчество</label>
+                <input type="text" pattern="[A-Za-zА-Яа-яЁё]{1,20}" id="patronimic" name="patronimic" placeholder="Введите отчество" maxlength="50" autocomplete="off" required> <br>
+            </p>
+                
+            <p>
+                <label>Дата трудоустройства</label>
+                <input type="date" id="date" required> <br>
+            </p>
+                
+            <p>
+                <label>Статус</label>
+                <input type="text" id="status", name="status", placeholder="1 - админ, 0 - юзер", autocomplete="off">
+            </p>
+                
+            </fieldset>
+
+            <button class="btn btn-success" type="submit" onclick="submit();"> Зарегистрировать пользователя </button>
+    </form>
+
+    
+</body>
+</html>
