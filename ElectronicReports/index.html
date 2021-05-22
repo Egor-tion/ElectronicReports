@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autorization</title>
+    <link rel="stylesheet" href="./frontend/css/autorize.css">
+</head>
+<body>
+    <form action="./backend/authorization.php" method="post" class="container">
+
+        <figure>
+            <img src="./frontend/img/logo.png" alt="logo">
+        </figure>
+
+        <div class="autorize-container" action="./backend/authorization.php">
+                <input name="login" id="login" type="text" class="login" placeholder="Логин:">
+                <input name="password" id="password" type="password" class="password" placeholder="Пароль:">
+                <button class="submit" type="submit"> Войти </button>
+            </div>
+    </form>
+</body>
+</html>

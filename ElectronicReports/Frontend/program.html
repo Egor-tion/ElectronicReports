@@ -1,0 +1,34 @@
+<?php include("../backend/func/2.php")?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/program.css">
+</head>
+<body>
+    <header>
+        <div class="name_page">Программа</div>
+        <div class="header_list">
+            <a href="./personal.html" class="header_link">В личный кабинет</a>
+    </div>
+    </header>
+    <div class="wrapper">
+        <div class="info">
+            <?php include("../backend/proginfo.php")?>
+        </div>
+
+        <div class="buttons">
+            <button onclick="location.href = '#'">Редактировать программу</button>
+            <button onclick="location.href = '#'">Удалить программу</button>
+            <button onclick="location.href = '../backend/newgroup.php'">Добавить группу</button>
+        </div>
+
+        <div class="links">
+        </div>
+    </div>
+</body>
+</html>

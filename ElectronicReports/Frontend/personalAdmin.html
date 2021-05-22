@@ -1,0 +1,53 @@
+<?php include("../backend/func/1.php")?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Account</title>
+    <link rel="stylesheet" href="./css/personal.css">
+
+</head>
+<body>
+
+    <script src="./js/personal.js"></script>
+    <div class="wrapper">
+            <header>
+                <div class="name_page">Личный кабинет</div>
+                <div class="header_list">
+                    <a href="../backend/exit.php" class="header_link">Выход</a>
+            </div>
+            </header>
+
+            <div class="info">
+                <?php include("../backend/func/personal.php")?>
+            </div>
+
+            <div class="reports">
+                <h1>Функции:</h1>
+
+                <p>
+                    <a href="./allusers.html" class="header_link"> Список пользователей</a>
+                </p>
+
+                <p>
+                    <a href="./userList.html" class="header_link"> Список пользователей</a>
+                </p>
+
+								<p>
+                    <a href="./register0.html" class="header_link"> Создание нового пользователя</a>
+                </p>
+
+								<p>
+                    <a href="#" class="header_link"> Обучаемые</a>
+                </p>
+            </div>
+                </div>
+    </div>
+
+
+
+</body>
+</html>
