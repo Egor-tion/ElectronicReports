@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add child</title>
+    <link rel="stylesheet" href="./css/registration.css">
+    <script>
+        function submit(){
+            alert("Вы уверены, что хотите добавить программу?");
+        }
+
+        function onChecked(divId, checkboxId) {
+    if (document.getElementById(checkboxId).checked) {
+        document.getElementById(divId).style.display = "block";
+    } else {
+        document.getElementById(divId).style.display = "none";
+    }
+}
+    </script>
+</head>
+
+<body>
+
+    <header> 
+        <div class="name_page">Добавить программу</div>
+        <div class="header_list">
+        <a href="#" class="header_link">Выход</a>
+    </div>
+    </header>
+
+    <form id="form" action="../backend/check0.php" method="post" accept-charset="utf-8">
+        <fieldset>
+            
+            <fieldset>
+                <p class="item">
+                    <label>Название</label>
+                    <input type="tel" class="fields" placeholder="Новая программа">    
+                </p>
+
+                <p class="item">
+                    <label>Длительность</label>
+                    <input type="text" class="fields" placeholder="72 часа">    
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <p>
+                    <input type="checkbox" id="checkbox1" oninput="onChecked(1, 'checkbox1')">Дополнительный педагог</p>
+                <div class="hidden" id="1">
+                    <fieldset class="dop">
+                        <p class="item">
+                            <label>Имя:</label>
+                            <input type="text" class="fields" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                        </p>
+            
+                        <p class="item">
+                            <label>Фамилия:</label>
+                            <input type="text" class="fields" placeholder="Фамилия" pattern="[A-Za-zА-Яа-яЁё]{2,}">    
+                        </p>
+            
+                        <p class="item">
+                            <label>Отчество:</label>
+                            <input type="text" class="fields" placeholder="Отчество" pattern="[A-Za-zА-Яа-яЁё]"{2,}>    
+                        </p>
+                    </fieldset>
+                </div>
+            </fieldset>
+
+        </fieldset>
+
+            <button class="btn btn-success" type="submit" onclick="submit();"> Добавить обучающегося </button>
+    </form>
+
+    
+</body>
+</html>

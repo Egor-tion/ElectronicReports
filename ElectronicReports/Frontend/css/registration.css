@@ -114,3 +114,7 @@ label{
     float: left;
     padding-right: 1em;
 }
+
+.hidden{
+    display: none;
+}
