@@ -155,6 +155,7 @@ img{
     overflow-y: scroll;
     width: 80%;
     margin-left: 1em;
+    height: 5em;
 }
 
 li {
@@ -169,4 +170,9 @@ li:hover{
 
 .hide{
     display: none;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #1387BB;
+    border-radius: 10px;
 }
