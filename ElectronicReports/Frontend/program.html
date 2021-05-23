@@ -1,3 +1,5 @@
+<?php include("../backend/func/2.php")?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,38 +11,28 @@
     <link rel="stylesheet" href="./css/program.css">
 </head>
 <body>
-    <header> 
+    <header>
         <div class="name_page">Старт в IT</div>
         <div class="header_list">
-            <a href="#" class="header_link">В личный кабинет</a>
+            <a href="./personal.html" class="header_link">В личный кабинет</a>
     </div>
     </header>
     <div class="wrapper">
         <div class="info">
-            <p>
-                Название: Старт в IT 
-            </p>
-            <p>
-                Длительность: 72 часа
-            </p>
-            <p>
-                Количество групп: 3
-            </p>
+            <?php include("../backend/prog/proginfo.php")?>
         </div>
 
         <div class="buttons">
             <button>Редактировать программу</button>
             <button>Удалить программу</button>
-            <button>Добавить группу</button>
+            <button onclick="location.href = '../backend/newgroup.php'">Добавить группу</button>
         </div>
-        
+
 
         <div class="dropdown">
             <button onclick="dropDown()" class="dropbtn">Группы</button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="#">Группа 1</a>
-                <a href="#">Группа 2</a>
-                <a href="#">Группа 3</a>
+              <?php include("../backend/prog/proginfo2.php")?>
             </div>
         </div>
     </div>

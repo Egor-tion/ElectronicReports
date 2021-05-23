@@ -6,11 +6,6 @@
   session_start();
   $val = $_GET['prog_id'];
   $_SESSION['progid'] = $val;
-  //$val = 30;
-  $result = $mysql->query("SELECT * FROM `programs` WHERE `program_id` = '$val'");
-  $print = $result->fetch_assoc();
-
-  $_SESSION['prog'] = $print;
 
   header('Location: ../frontend/program.html');
 ?>

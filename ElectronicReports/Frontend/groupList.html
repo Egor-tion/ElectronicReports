@@ -14,7 +14,7 @@
 
     <div class="wrapper">
         <header>
-            <div class="name_page"><?php echo $_SESSION['prog']["title"] ?>: Группа 1</div>
+            <div class="name_page"><?php include("../backend/group/groupinfo.php") ?></div>
             <div class="header_list">
             <a href="./program.html" class="header_link">К программе</a>
         </div>
@@ -29,7 +29,7 @@
 
 
     <ol class="ul">
-        <?php include("../backend/groupList.php")?>
+        <?php include("../backend/group/groupList.php")?>
     </ol>
 
 </body>

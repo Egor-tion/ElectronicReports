@@ -61,7 +61,7 @@ foreach ($allusers as $value) {
                   <div class=\"buttons\">
                       <button id=\"setting\" onclick=\"redact();\">Применить редактирование</button>
                       <button id=\"del\" onclick=\"delte();\">Удалить обучающегося</button>
-                      <button id=\"app\" onclick=\"location.href = './appstud.php?stud_id=".$value["student_id"]."'\">Добавить в группу</button>
+                      <button id=\"app\" onclick=\"location.href = '../backend/appstud.php?stud_id=".$value["student_id"]."'\">Добавить в группу</button>
                   </div>
 
 
