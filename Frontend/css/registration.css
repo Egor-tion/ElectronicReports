@@ -118,3 +118,23 @@ label{
 .hidden{
     display: none;
 }
+
+.addTeacher{
+    justify-content: left;
+    width: auto;
+
+    border: none;
+
+    align-items: left;
+}
+
+.main{
+    border: none;
+}
+
+.dd{
+    display: inline-flex;
+    width: 15em;
+    text-align: left;
+}
+
