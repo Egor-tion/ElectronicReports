@@ -8,19 +8,16 @@ window.onload = () =>{
             list.forEach(elem => {
                 if(elem.innerText.search(value) == -1){
                     elem.classList.add('hide');
-                    elem.innerHTML = elem.innerText;
                 }
                 else{
                     elem.classList.remove('hide');
                     let str = elem.innerText;
-                    elem.innerHTML = insertMark(str, elem.innerText.search(value), value.length);
-                }
+                 }
             });
         }
         else{
             list.forEach(elem => {
                 elem.classList.remove('hide');
-                elem.innerHTML = elem.innerText;
 
             });
         }

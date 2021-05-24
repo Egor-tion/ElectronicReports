@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./css/childrenList.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src = "./js/childrenList.js"></script>
+<title>Children's list</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header> 
+            <div class="name_page">Старт в IT: Группа 1</div>
+            <div class="header_list">
+            <a href="#" class="header_link">К списку групп</a>
+        </div>
+        </header>
+
+        <div class="searcher">
+            <img src="./img/loupe.png" alt="Поиск">
+            <input type="text" class="search" id="input" autofocus>
+            <a href="#"><img src="./img/add.png" alt="Добавить"></a>
+            </div>
+
+
+
+    <ol class="ul">
+        <div class="block">
+            <li class="extremum-click">id </li>
+            <div class="extremum-slide">
+                <form class="success" action="" autocomplete="off" id="form">
+                    <fieldset class="characteristics">
+
+                        <p class="item">
+                            <label>Имя:</label>
+                            <input type="text" class="fields" value="Имя" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                        </p>
+        
+                        <p class="item">
+                            <label>Фамилия:</label>
+                            <input type="text" class="fields" value="Фамилия" pattern="[A-Za-zА-Яа-яЁё]{2,}">    
+                        </p>
+        
+                        <p class="item">
+                            <label>Отчество:</label>
+                            <input type="text" class="fields" value="Отчество" pattern="[A-Za-zА-Яа-яЁё]"{2,}>    
+                        </p>
+                        <p class="item">
+                            <label>Дата рождения</label>
+                            <input type="date" class="fields" value="01.01.1991">    
+                        </p>
+        
+                        <p class="item">
+                            <label>Номер сертификата</label>
+                            <input type="text" class="fields" value="1_0000000_00000" pattern="[0-9]{1}_[0-9]{7}_[0-9]{5}">    
+                        </p>
+
+                        <p class="item">
+                            <label>Адрес</label>
+                            <input type="text" class="fields" value="ппп">    
+                        </p>
+
+                        <p class="item">
+                            <label>Телефон родителя</label>
+                            <input type="tel" class="fields" value="+7(xxx)xxx-xx-xx" pattern="+7([0-9]){3}[0-9]{3}-[0-9]{2}-[0-9]{2}">    
+                        </p>
+
+                        <p class="item">
+                            <label>Номер СНИЛС</label>
+                            <input type="text" class="fields" value="123-456-789 00" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}\s[0-9]{2}">    
+                        </p>
+                                
+                        <div class="buttons">
+                            <button id="setting" onclick="redact();">Применить редактирование</button>
+                            <button id="del" onclick="delte();">Удалить обучающегося</button>
+                            <button id="add" onclick="add();">Добавить в группу</button>
+                        </div>
+                                
+                        
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="block">
+            <li class="extremum-click">Имя Фамилия Отчество </li>
+            <div class="extremum-slide">
+                <form class="success" action="" autocomplete="off" id="form">
+                    <fieldset class="characteristics">
+                        <p class="item">
+                            <label>Имя:</label>
+                            <input type="text" class="fields" value="Имя" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                        </p>
+        
+                        <p class="item">
+                            <label>Фамилия:</label>
+                            <input type="text" class="fields" value="Фамилия" pattern="[A-Za-zА-Яа-яЁё]{2,}">    
+                        </p>
+        
+                        <p class="item">
+                            <label>Отчество:</label>
+                            <input type="text" class="fields" value="Отчество" pattern="[A-Za-zА-Яа-яЁё]"{2,}>    
+                        </p>
+        
+                        <p class="item">
+                            <label>Дата рождения</label>
+                            <input type="date" class="fields" value="01.01.1991">    
+                        </p>
+        
+                        <p class="item">
+                            <label>Номер сертификата</label>
+                            <input type="text" class="fields" value="1_0000000_00000" pattern="[0-9]{1}_[0-9]{7}_[0-9]{5}">    
+                        </p>
+
+                        <p class="item">
+                            <label>Адрес</label>
+                            <input type="text" class="fields" value="ппп">    
+                        </p>
+
+                        <p class="item">
+                            <label>Телефон родителя</label>
+                            <input type="tel" class="fields" value="+7(xxx)xxx-xx-xx" pattern="+7([0-9]){3}[0-9]{3}-[0-9]{2}-[0-9]{2}">    
+                        </p>
+
+                        <p class="item">
+                            <label>Номер СНИЛС</label>
+                            <input type="text" class="fields" value="123-456-789 00" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}\s[0-9]{2}">    
+                        </p>
+                                
+                        <div class="buttons">
+                            <button id="setting" onclick="redact();">Применить редактирование</button>
+                            <button id="del" onclick="delte();">Удалить обучающегося</button>
+                            <button id="add" onclick="add();">Добавить в группу</button>
+                        </div>
+                                
+                        
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="block">
+            <li class="extremum-click"> ffff </li>
+            <div class="extremum-slide">
+                <form class="success" action="" autocomplete="off" id="form">
+                    <fieldset class="characteristics">
+        
+                        <p class="item">
+                            <label>Имя:</label>
+                            <input type="text" class="fields" value="Имя" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                        </p>
+        
+                        <p class="item">
+                            <label>Фамилия:</label>
+                            <input type="text" class="fields" value="Фамилия" pattern="[A-Za-zА-Яа-яЁё]{2,}">    
+                        </p>
+        
+                        <p class="item">
+                            <label>Отчество:</label>
+                            <input type="text" class="fields" value="Отчество" pattern="[A-Za-zА-Яа-яЁё]"{2,}>    
+                        </p>
+        
+                        <p class="item">
+                            <label>Дата рождения</label>
+                            <input type="date" class="fields" value="01.01.1991">    
+                        </p>
+        
+                        <p class="item">
+                            <label>Номер сертификата</label>
+                            <input type="text" class="fields" value="1_0000000_00000" pattern="[0-9]{1}_[0-9]{7}_[0-9]{5}">    
+                        </p>
+
+                        <p class="item">
+                            <label>Адрес</label>
+                            <input type="text" class="fields" value="ппп">    
+                        </p>
+
+                        <p class="item">
+                            <label>Телефон родителя</label>
+                            <input type="tel" class="fields" value="+7(xxx)xxx-xx-xx" pattern="+7([0-9]){3}[0-9]{3}-[0-9]{2}-[0-9]{2}">    
+                        </p>
+
+                        <p class="item">
+                            <label>Номер СНИЛС</label>
+                            <input type="text" class="fields" value="123-456-789 00" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}\s[0-9]{2}">    
+                        </p>
+                                
+                        <div class="buttons">
+                            <button id="setting" onclick="redact();">Применить редактирование</button>
+                            <button id="del" onclick="delte();">Удалить обучающегося</button>
+                            <button id="add" onclick="add();">Добавить в группу</button>
+                        </div>
+                                
+                        
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </ol>
+
+</body>
+</html>

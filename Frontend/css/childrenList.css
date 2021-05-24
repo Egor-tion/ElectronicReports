@@ -68,7 +68,7 @@ li{
 
 .extremum-slide{
     font-family: Montserrat;
-    width: 40%;
+    width: 60%;
     height: 30%;
     border-radius: 10px;
     border: none;
@@ -162,8 +162,79 @@ outline: none;
     margin: 1%;
 }
 
+.searcher1{
+    display: inline-flex;
+    width: 100%;
+    margin: 3%;
+
+}
+
+.search1{
+    border: solid #51BDED;
+    border-radius: 10px;
+    border-width: 3px;
+    width: 50%;
+    height: 1.5em;
+    margin-right: 2em;
+    margin-left: 1em;
+    margin-top: 0.8em;
+    font-family: Montserrat;
+    margin-bottom: auto;
+    outline: none;
+
+}
+
+#add1{
+    width: 15em;
+    margin-right: 3em;
+}
+
+#delGroup{
+    width: 15em;
+    margin-left: 3em;
+}
+
 img{
     height: 2em ;
     width: 2em;
     position: relative;
+}
+
+.warn-window{
+    position: fixed;
+    left: 45%;
+    justify-content: center;
+    align-items: center;
+    
+    width: 20em;
+    text-align: center;
+    font-size: 14px;
+    display: none;
+    
+    border-radius: 10px;
+    border: #1387BB solid;
+    border-width: 3px;
+
+}
+
+button{
+    outline: none;
+    margin-left: 1em;
+}
+
+.quest{
+width: 18em;
+text-align: center;
+}
+
+.buttons{
+    align-content: space-between;
+    justify-content: center;
+    margin-bottom: 0.25em;
+}
+
+#yes{
+    margin-right: 1.5em;
+    text-align: right;
+
 }
