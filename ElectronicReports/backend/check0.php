@@ -15,5 +15,5 @@
     $mysql->query("INSERT INTO `userss` (`Login`, `Password`, `Name`, `Lastname`, `Fathers_name`, `Admin`, `EmploymentDate`)
         VALUES('$login', '$password', '$name', '$lastname', '$fathers_name', '$status', '$employmentDate')");
     $mysql->close();
-    header('Location: ../Frontend/allusers.html');
+    header('Location: ../Frontend/personalAdmin.html');
 ?>

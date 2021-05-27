@@ -30,7 +30,7 @@
       box-sizing: border-box;
   }
 
-  *, *::before, *after { 
+  *, *::before, *after {
       box-sizing: inherit;
   }
 
@@ -42,7 +42,7 @@
       line-height: 1.2;
       font-weight: normal;
       color: #000;
-  }  
+  }
 
 .container{
     max-width: 800px;
@@ -115,11 +115,8 @@ figure{
     font-style: italic;
 }
 
-
-
-
-
-
-
-
-
+p{
+    text-align: center;
+    background-color: #FF7373;
+    color: black;
+}

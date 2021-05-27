@@ -8,11 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Account</title>
     <link rel="stylesheet" href="./css/personal.css">
-
+    <script src="./js/personal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
-
-    <script src="./js/personal.js"></script>
     <div class="wrapper">
             <header>
                 <div class="name_page">Личный кабинет</div>
@@ -26,11 +25,7 @@
             </div>
 
             <div class="reports">
-                <h1>Функции:</h1>
-
-                <p>
-                    <a href="./allusers.html" class="header_link"> Список пользователей</a>
-                </p>
+                <h1>Формы отчетности:</h1>
 
                 <p>
                     <a href="./userList.html" class="header_link"> Список пользователей</a>
@@ -41,11 +36,23 @@
                 </p>
 
 								<p>
-                    <a href="#" class="header_link"> Обучаемые</a>
+                    <a href="./childrenListAd.html" class="header_link"> Обучаемые</a>
                 </p>
             </div>
+
+            <div class="programms">
+
+                <div class="searcher">
+                    <img src="./img/loupe.png" alt="Поиск">
+                    <input type="text" class="search" id="input" autofocus>
+                    <a href="./newprogram.html"><img src="./img/add.png" alt="Добавить"></a>
                 </div>
-    </div>
+
+                <ol class="for-ul">
+                  <?php include("../backend/func/personal3.php")?>
+                </ol>
+            </div>
+      </div>
 
 
 

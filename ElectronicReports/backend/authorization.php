@@ -14,6 +14,7 @@
       AND `Password` = '$password'");
     $resultUser = $result->fetch_assoc();
     if(count($resultUser) == 0) {
+      $_SESSION['aut'] = 1;
       header('Location: ../index.html');
     }
     else {
@@ -21,12 +22,14 @@
         $_SESSION['status'] = 1;
         $kostil = $mysql->query("SELECT * FROM `userss` WHERE `Login` = '$login' AND `Password` = '$password'");
         $_SESSION['user'] = $kostil->fetch_assoc();
+        $_SESSION['aut'] = 0;
         header('Location: ../frontend/personalAdmin.html');
       }
       else{
         $_SESSION['status'] = 2;
         $kostil = $mysql->query("SELECT * FROM `userss` WHERE `Login` = '$login' AND `Password` = '$password'");
         $_SESSION['user'] = $kostil->fetch_assoc();
+        $_SESSION['aut'] = 0;
         header('Location: ../frontend/personal.html');
       }
     }

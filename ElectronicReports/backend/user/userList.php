@@ -16,7 +16,7 @@ foreach ($allusers as $id) {
     echo"
     <div class=\"block\">
         <li class=\"extremum-click\">".$value["LastName"]." ".$value["Name"]." ".$value["Fathers_name"]." </li>
-        <div class=\"extremum-slide1\">
+        <div class=\"extremum-slide\">
         <form class=\"success\" action=\"../backend/stud/redact.php?stud_id=".$value["student_id"]."\" method=\"post\" autocomplete=\"off\" id=\"form\">
                 <fieldset class=\"characteristics\">
 
@@ -61,7 +61,7 @@ foreach ($allusers as $id) {
 
                     <div class=\"buttons\">
                         <button id=\"setting\" type=\"submit\">Применить редактирование</button>
-                        <button id=\"del\" onclick=\"location.href = '../backend/stud/delstudgr.php?stud_id=".$value["student_id"]."'\">Удалить из группы</button>
+                        <button id=\"del\" onclick=\"delte();\">Удалить обучающегося</button>
                     </div>
 
 

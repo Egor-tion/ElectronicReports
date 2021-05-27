@@ -15,7 +15,7 @@
     $mysql->query("SET names utf8");
     $mysql->query("INSERT INTO `students` (`Name`, `Lastname`, `Fathers_name`, `BirthDate`, `CertificateNum`, `Address`, `TelephonNum`, `Snils`)
         VALUES('$name', '$lastname', '$fathers_name', '$birthdate', '$certificatenum', '$address', '$telephonnum', '$snils')");
-    
+
     $mysql->close();
-    header('Location: ../Frontend/childrenList.html');
+    header("Location: ".$_SERVER['HTTP_REFERER']);
 ?>

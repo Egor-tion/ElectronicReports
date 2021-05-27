@@ -29,7 +29,7 @@ html{
     box-sizing: border-box;
 }
 
-*, *::before, *after { 
+*, *::before, *after {
     box-sizing: inherit;
 }
 
@@ -62,30 +62,51 @@ header{
 .wrapper{
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 0.5em;
 }
 
 .info{
+    grid-column-start: 1;
+    grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2;
-    grid-column-start: 1;
 
-    margin-left: 2em;
+    margin-top: 1em;
+
+
+    border: 3px #1387BB solid;
+    border-radius: 10px;
+
+
 }
 
 .buttons{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
 
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    float: right;
-    justify-content: flex-end;
+    display: inline-flex;
+    justify-content: space-between;
+
+    border: 3px #1387BB solid;
+    border-radius: 10px;
+
+}
+
+.but_groups{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+    display: inline-flex;
+    justify-content: space-between;
+
+    border: 3px #1387BB solid;
+    border-radius: 10px;
 
 }
 
@@ -103,6 +124,8 @@ button {
     font-size: 16px;
 
     align-self: flex-start;
+
+    width: 17em;
 }
 
 button:hover{
@@ -158,4 +181,8 @@ button:hover{
 
 .show{
     display: block;
+}
+
+p{
+    margin-left: 2em;
 }

@@ -4,7 +4,7 @@
   $mysql->query("SET names utf8");
 
   $kostil1 = $_SESSION['user']["user_id"];
-  $result = $mysql->query("SELECT * FROM `userproglink` WHERE `user_id` = '$kostil1'");
+  $result = $mysql->query("SELECT * FROM `programs`");
   $allusers=array();
   foreach ($result as $value) {
     $allusers[] = $value;

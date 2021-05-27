@@ -1,4 +1,4 @@
-<?php include("../backend/func/2.php")?>
+<?php include("../backend/func/3.php")?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,31 +8,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New program form</title>
     <link rel="stylesheet" href="./css/registration.css">
-    <script src="./js/registration.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script>
+        function submit(){
+            alert("Вы уверены, что хотите добавить программу?");
+        }
+
+        function onChecked(divId, checkboxId) {
+    if (document.getElementById(checkboxId).checked) {
+        document.getElementById(divId).style.display = "block";
+    } else {
+        document.getElementById(divId).style.display = "none";
+    }
+}
+    </script>
 </head>
 
 <body>
 
     <header>
-        <div class="name_page">Форма добавления новой программы</div>
+        <div class="name_page">Добавить программу</div>
         <div class="header_list">
-            <a href="./personal.html" class="header_link">Личная страница</a>
+            <?php include("../backend/func/per.php")?>
     </div>
     </header>
 
-    <form id="form" action="../backend/newprogram.php" method="post" accept-charset="utf-8">
-        <fieldset>
-            <p>
-                <label>Название программы</label>
-                <input type="text" id="title" name="title" placeholder="Введите название" maxlength="30" autocomplete="off" autofocus required>
+    <form id="form" action="../backend/prog/newprogram.php" method="post" accept-charset="utf-8">
+      <fieldset>
+
+          <fieldset class="main">
+            <p class="item">
+                <label>Название</label>
+                <input type="tel" class="fields" id="title" name="title" placeholder="Новая программа" maxlength="30" autocomplete="off" autofocus required>
             </p>
 
-            <p>
-                <label>Количество часов</label>
-                <input type="text" id="duration" name="duration" placeholder="Введите количество часов" maxlength="3" autocomplete="off" autofocus required>
+            <p class="item">
+                <label>Длительность в часах</label>
+                <input type="text" class="fields" id="duration" name="duration" placeholder="72 часа" maxlength="3" autocomplete="off" autofocus required>
             </p>
 
-            </fieldset>
+          </fieldset>
+
+          <fieldset class="addTeacher">
+
+              <label class="dd">
+                  Дополнительный педагог
+                  <input type="checkbox" id="checkbox1" name="checkbox1" oninput="onChecked(1, 'checkbox1')">
+
+              </label>
+
+              <div class="hidden" id="1">
+                  <fieldset class="dop">
+                      <p class="item">
+                          <label>Имя:</label>
+                          <input type="text" id="secName" name="secName" class="fields" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                      </p>
+
+                      <p class="item">
+                          <label>Фамилия:</label>
+                          <input type="text" id="secLast" name="secLast" class="fields" placeholder="Фамилия" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                      </p>
+
+                      <p class="item">
+                          <label>Отчество:</label>
+                          <input type="text" id="secFather" name="secFather" class="fields" placeholder="Отчество" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                      </p>
+                  </fieldset>
+              </div>
+          </fieldset>
+
+      </fieldset>
+
 						<button class="btn btn-success" type="submit"> Добавить новую программу </button>
     </form>
 

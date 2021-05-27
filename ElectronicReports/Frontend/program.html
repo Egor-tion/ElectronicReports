@@ -1,4 +1,4 @@
-<?php include("../backend/func/2.php")?>
+<?php include("../backend/func/3.php")?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,29 +11,25 @@
     <link rel="stylesheet" href="./css/program.css">
 </head>
 <body>
-    <header>
-        <div class="name_page">Старт в IT</div>
-        <div class="header_list">
-            <a href="./personal.html" class="header_link">В личный кабинет</a>
-    </div>
-    </header>
-    <div class="wrapper">
-        <div class="info">
-            <?php include("../backend/prog/proginfo.php")?>
-        </div>
 
-        <div class="buttons">
-            <button>Редактировать программу</button>
-            <button>Удалить программу</button>
-            <button onclick="location.href = '../backend/newgroup.php'">Добавить группу</button>
+      <?php include("../backend/prog/proginfo.php")?>
+
+        <div class="buttons" >
+            <button onclick="location.href = './setProgram.html'">Редактировать программу</button>
+            <button onclick="location.href = '../backend/prog/delprog.php'">Удалить программу</button>
         </div>
 
 
-        <div class="dropdown">
-            <button onclick="dropDown()" class="dropbtn">Группы</button>
-            <div id="myDropdown" class="dropdown-content">
-              <?php include("../backend/prog/proginfo2.php")?>
-            </div>
+
+        <div class="but_groups">
+          <div class="dropdown">
+              <button onclick="dropDown()" class="dropbtn">Группы</button>
+              <div id="myDropdown" class="dropdown-content">
+                <?php include("../backend/prog/proginfo2.php")?>
+              </div>
+          </div>
+
+          <button onclick="location.href = '../backend/group/newgroup.php'">Добавить группу</button>
         </div>
     </div>
 </body>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add program</title>
+    <link rel="stylesheet" href="./css/registration.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script>
+
+        function onChecked(divId, checkboxId) {
+    if (document.getElementById(checkboxId).checked) {
+        document.getElementById(divId).style.display = "block";
+    } else {
+        document.getElementById(divId).style.display = "none";
+    }
+}
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="name_page">Редактировать программу</div>
+        <div class="header_list">
+        <a href="./program.html" class="header_link">К программе</a>
+    </div>
+    </header>
+
+    <form id="form"  accept-charset="utf-8">
+        <fieldset>
+
+            <fieldset class="main">
+                <p class="item">
+                    <label>Название</label>
+                    <input type="text" value="Программа" name="title" required = "reuired" class="fields" placeholder="Новая программа">
+                </p>
+
+                <p class="item">
+                    <label>Длительность в часах</label>
+                    <input type="text" value="72" class="fields" pattern="[0-9]{,3}" placeholder="72" required>
+                </p>
+            </fieldset>
+
+            <fieldset class="addTeacher">
+
+                <label class="dd">
+                    Дополнительный педагог
+                    <input type="checkbox" id="checkbox1" oninput="onChecked(1, 'checkbox1')">
+
+                </label>
+
+                <div class="hidden" id="1">
+                    <fieldset class="dop">
+                        <p class="item">
+                            <label>Имя:</label>
+                            <input type="text" value="Имя" class="fields" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                        </p>
+
+                        <p class="item">
+                            <label>Фамилия:</label>
+                            <input type="text" value="Фамилия" class="fields" placeholder="Фамилия" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                        </p>
+
+                        <p class="item">
+                            <label>Отчество:</label>
+                            <input type="text" value="Отчество" class="fields" placeholder="Отчество" pattern="[A-Za-zА-Яа-яЁё]"{2,}>
+                        </p>
+                    </fieldset>
+                </div>
+            </fieldset>
+
+        </fieldset>
+
+            <button class="btn btn-success" type="submit" onclick="submit()"> Редактировать программу </button>
+    </form>
+
+
+
+</body>
+</html>
