@@ -38,14 +38,16 @@
       <fieldset>
 
           <fieldset class="main">
+
+                <?php include("../backend/func/progname.php")?>
             <p class="item">
                 <label>Название</label>
-                <input type="tel" class="fields" id="title" name="title" placeholder="Новая программа" maxlength="30" autocomplete="off" autofocus required>
+                <input type="tel" class="fields" id="title" name="title" placeholder="Новая программа" maxlength="30" autocomplete="off" autofocus pattern="[A-Za-zА-Яа-яЁё]{2,30}" required>
             </p>
 
             <p class="item">
                 <label>Длительность в часах</label>
-                <input type="text" class="fields" id="duration" name="duration" placeholder="72 часа" maxlength="3" autocomplete="off" autofocus required>
+                <input type="text" class="fields" id="duration" name="duration" placeholder="72 часа" maxlength="3" autocomplete="off" autofocus pattern="[0-9]{1,30}" required>
             </p>
 
           </fieldset>
