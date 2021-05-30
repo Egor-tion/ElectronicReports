@@ -3,6 +3,8 @@
   $mysql = new mysqli($host, $myuser, $mypassword, $database);
   $mysql->query("SET names utf8");
 
+  $_SESSION['aut'] = 0; // Проверка правильности ввода для других страниц
+
   $val = $_SESSION['progid'];
   $result = $mysql->query("SELECT * FROM `programs` WHERE `program_id` = '$val'");
   $print = $result->fetch_assoc();
@@ -17,6 +19,7 @@
     }
   }
 
+  // Кнопка "Отказа от проги". Удалить в случае ненадбности
   $val1 = $_SESSION['user']["user_id"];
   $result = $mysql->query("SELECT * FROM `userproglink` WHERE `program_id` = '$val' and `user_id` = '$val1'");
   $resultUser = $result->fetch_assoc();

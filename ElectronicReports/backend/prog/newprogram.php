@@ -12,10 +12,11 @@
     $resultch = $mysql->query("SELECT count(*) FROM `programs` WHERE `title` = '$title'");
     $resultUser = $resultch->fetch_row();
     if($resultUser[0] > 0) {
+      $_SESSION['aut'] = 2;
       header('Location: ../../frontend/newprogram.html');  // ЕСЛИ НАЗВАНИЕ ПОВТОРЯЕТСЯ, ТО НИЗЯ СОЗДАТЬ
     }else{
       if ($_POST['checkbox1'] == 'on'){
-        if ( ($_POST['secName'] == 0) and ($_POST['secLast'] == 0) and ($_POST['secFather'] == 0) ) {
+        if ( !(empty($_POST['secName'])) and !(empty($_POST['secLast'])) and !(empty($_POST['secFather'])) ) {
           $secName = $_POST['secName'];
           $secLast = $_POST['secLast'];
           $secFather = $_POST['secFather']; // Проверить введенного преподавателя
@@ -24,7 +25,9 @@
             WHERE `Name` = '$secName' and `Lastname` = '$secLast' and `Fathers_name` = '$secFather'");
           $kostil = $resultch->fetch_assoc();
 
-          if(count($kostil) == 0) {
+          $trfl = empty($kostil);
+          if($trfl) {
+            $_SESSION['aut'] = 3;
             header('Location: ../../frontend/newprogram.html'); // Если преподаватель введён неверно
           }
 
@@ -46,10 +49,11 @@
               VALUES('$id2', '$secId')");
 
           $mysql->close();
+          $_SESSION['aut'] = 0;
           header('Location: ../../frontend/program.html');
         } else {
-          echo "string";
-          //header('Location: ../../frontend/newprogram.html'); // Если доп препод незаполнен
+          $_SESSION['aut'] = 3;
+          header('Location: ../../frontend/newprogram.html'); // Если доп препод незаполнен
         }
       } else {
         $id = $_SESSION['user']["user_id"];
@@ -66,6 +70,7 @@
             VALUES('$id2', '$id')");
 
         $mysql->close();
+        $_SESSION['aut'] = 0;
         header('Location: ../../frontend/program.html');
       }
 

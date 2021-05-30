@@ -8,12 +8,13 @@
     $fathers_name = filter_var(trim($_POST['fathers_name']), FILTER_SANITIZE_STRING);
     $status = $_POST['status'];
     $employmentDate = $_POST['employmentDate'];
+    $post = filter_var(trim($_POST['post']), FILTER_SANITIZE_STRING);
 
     //подключимся к бд
     $mysql = new mysqli($host, $myuser, $mypassword, $database);
     $mysql->query("SET names utf8");
-    $mysql->query("INSERT INTO `userss` (`Login`, `Password`, `Name`, `Lastname`, `Fathers_name`, `Admin`, `EmploymentDate`)
-        VALUES('$login', '$password', '$name', '$lastname', '$fathers_name', '$status', '$employmentDate')");
+    $mysql->query("INSERT INTO `userss` (`Login`, `Password`, `Name`, `Lastname`, `Fathers_name`, `Admin`, `EmploymentDate`, `Post`)
+        VALUES('$login', '$password', '$name', '$lastname', '$fathers_name', '$status', '$employmentDate', '$post')");
     $mysql->close();
     header('Location: ../Frontend/personalAdmin.html');
 ?>

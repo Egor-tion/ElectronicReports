@@ -9,6 +9,8 @@
 
   echo "<p>".$kostil["Name"]." ".$kostil["Lastname"]." ".$kostil["Fathers_name"]."</p>
   <p>Должность:".$kostil["Post"]."</p>
-  <p>Дата начала работы: ".$kostil["EmploymentDate"]."</p>"
+  <p>Дата начала работы: ".$kostil["EmploymentDate"]."</p>";
+
+  $_SESSION['aut'] = 0; // Проверка всплывашки
 
 ?>

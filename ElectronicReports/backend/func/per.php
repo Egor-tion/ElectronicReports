@@ -7,5 +7,7 @@ if ($_SESSION['status'] == 2){
   }
 }
 
+
+
 echo "<a href= \"".$link."\" class=\"header_link\">Личная страница</a>";
 ?>
