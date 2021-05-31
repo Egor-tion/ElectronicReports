@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+         url('../fonts/montserrat-v15-latin_cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v15-latin_cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* montserrat-regular - latin_cyrillic */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/montserrat-v15-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v15-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* montserrat-700 - latin_cyrillic */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/montserrat-v15-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v15-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+  html{
+      box-sizing: border-box;
+  }
+
+  *, *::before, *after { 
+    box-sizing: inherit;
+}
+
+
+body {
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #000;
+}
+
+form{
+    text-align: center;
+}
+
+header{
+    background-color: #51BDED;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+li{
+    list-style-type: none;
+}
+
+.name_page{
+    margin-left: 2em;
+}
+
+.header_link{
+    margin-right: 2em;
+}
+
+button{
+    font-family: Montserrat;
+    background-color: #1387BB;
+    border-radius: 10px;
+    border-color: #1387BB;
+    justify-content: center;
+    margin-top: 1%;
+    padding-bottom: 0.5em;
+}
+
+input{
+    border: solid #51BDED;
+    border-radius: 10px;
+    border-width: 3px;
+    width: 80%;
+    height: 1.5em;
+    font-family: Montserrat;
+    margin-bottom: auto;
+    border-radius: 10px;
+}
+
+button:focus{
+    outline: none;
+}
+
+input:focus{
+    outline: none;
+    justify-self: flex-end;
+}
+
+fieldset{
+    display: flex table-column;
+    border-radius: 10px;
+    border: solid #1387BB;
+    margin: 1em;
+}
+
+p{
+    clear: both;
+    text-align: right;
+}
+
+label{
+    float: left;
+    padding-right: 1em;
+}
+
+.hidden{
+    display: none;
+}
+
+.addTeacher{
+    justify-content: left;
+    width: auto;
+
+    border: none;
+
+    align-items: left;
+}
+
+.main{
+    border: none;
+}
+
+.dd{
+    display: inline-flex;
+    width: 15em;
+    text-align: left;
+}
+
+
+select{
+    border: solid #51BDED;
+    border-radius: 10px;
+    border-width: 3px;
+    width: 80%;
+    height: 3em;
+    font-family: Montserrat;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 2em;
+    margin-top: -2.5em; 
+}
+
+option{
+    font-family: Montserrat;
+    margin-bottom: auto;
+}

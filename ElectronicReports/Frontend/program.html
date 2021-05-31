@@ -1,0 +1,36 @@
+<?php include("../backend/func/3.php")?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/program.js"></script>
+    <link rel="stylesheet" href="./css/program.css">
+</head>
+<body>
+
+      <?php include("../backend/prog/proginfo.php")?>
+
+        <div class="buttons" >
+            <button onclick="location.href = './setProgram.html'">Редактировать программу</button>
+            <button onclick="location.href = '../backend/prog/delprog.php'">Удалить программу</button>
+        </div>
+
+
+
+        <div class="but_groups">
+          <div class="dropdown">
+              <button onclick="dropDown()" class="dropbtn">Группы</button>
+              <div id="myDropdown" class="dropdown-content">
+                <?php include("../backend/prog/proginfo2.php")?>
+              </div>
+          </div>
+
+          <button onclick="location.href = '../backend/group/newgroup.php'">Добавить группу</button>
+        </div>
+    </div>
+</body>
+</html>
