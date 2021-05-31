@@ -92,8 +92,13 @@ $count = 1;
 
    }
 
-   $link = $_SERVER['DOCUMENT_ROOT'].'/ElectronicReports/backend/forms/';
- $pdf->Output($link.'groups.pdf', 'F'); // Выводим в браузер
+   $link = $_SERVER['DOCUMENT_ROOT'].'/ElectronicReports/reports/';
+
+   $today = date("m.d.y");
+   $str = $program["title"].".".$group["groupNum"].".";
+   $name = $today.".".$str. "groups.pdf";
+
+ $pdf->Output($link.$name, 'F'); // Выводим в браузер
  $pdf->Output('groups.pdf', 'D');
 
  if ($_SESSION['status'] == 2){
