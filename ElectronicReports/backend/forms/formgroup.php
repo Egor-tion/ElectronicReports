@@ -99,7 +99,7 @@ $count = 1;
    $name = $today.".".$str. "groups.pdf";
 
  $pdf->Output($link.$name, 'F'); // Выводим в браузер
- $pdf->Output('groups.pdf', 'D');
+ $pdf->Output($name, 'D');
 
  if ($_SESSION['status'] == 2){
    $link = "../../frontend/personal.html";
