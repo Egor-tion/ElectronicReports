@@ -1,0 +1,36 @@
+<?php include("../backend/func/3.php")?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./css/childrenList.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src = "./js/childrenList.js"></script>
+<title>Children's list</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="name_page">Список обучающихся</div>
+            <div class="header_list">
+            <a href="./groupList.html" class="header_link">К группе</a>
+        </div>
+        </header>
+
+        <div class="searcher">
+            <img src="./img/loupe.png" alt="Поиск">
+            <input type="text" class="search" id="input" autofocus>
+            <a href="./addChild.html"><img src="./img/add.png" alt="Добавить"></a>
+            </div>
+
+
+
+    <ol class="ul">
+        <?php include("../backend/stud/childrenList.php")?>
+    </ol>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set program</title>
+    <link rel="stylesheet" href="./css/registration.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script>
+
+    function onChecked(divId, checkboxId) {
+      if (document.getElementById(checkboxId).checked) {
+          document.getElementById(divId).style.display = "block";
+      } else {
+          document.getElementById(divId).style.display = "none";
+      }
+    }
+
+    function meow(checkboxId){
+      if (document.getElementById('checkbox1').checked) {
+        document.getElementById('dopTeach').style.display='block';
+      }
+      else {
+        document.getElementById('dopTeach').style.display='none';
+      }
+    }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="name_page">Редактировать программу</div>
+        <div class="header_list">
+        <a href="./program.html" class="header_link">К программе</a>
+    </div>
+    </header>
+
+    <form id="form"  accept-charset="utf-8" action="../backend/prog/setprog.php" method="post">
+        <fieldset>
+
+          <fieldset class="main">
+            <?php include("../backend/prog/setinfo.php")?>
+
+        </fieldset>
+
+            <button class="btn btn-success" type="submit" onclick="submit()"> Редактировать программу </button>
+    </form>
+
+
+
+</body>
+</html>

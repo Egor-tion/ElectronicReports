@@ -1,0 +1,93 @@
+<?php include("../backend/func/3.php")?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other events repot</title>
+    <link rel="stylesheet" href="./css/registration.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</head>
+
+<style>
+    .fields{
+        width: 60%;
+    }
+    label{
+        font-size: 14px;
+    }
+</style>
+
+<body>
+
+    <header>
+        <div class="name_page">Отчет о проведении иных мероприятий</div>
+        <div class="header_list">
+        <?php include("../backend/func/per.php")?>
+    </div>
+    </header>
+
+    <form id="form"  accept-charset="utf-8" action="../backend/forms2/formevent.php" method="post">
+        <fieldset>
+
+            <fieldset class="main">
+                <p class="item">
+                    <label>Название мероприятия</label>
+                    <input type="text" id="nameEvent" name="nameEvent" required = "reuired" class="fields" required>
+                </p>
+
+                <p class="item">
+                    <label>Дата проведения</label>
+                    <input type="date" id="dateEvent" name="dateEvent" class="fields" required>
+                </p>
+
+                <p class="item">
+                    <label>Тематика мероприятия</label>
+                    <input type="text" id="titleEvent" name="titleEvent" class="fields" required>
+                </p>
+
+                <p class="item">
+                    <label>Место проведения</label>
+                    <input type="text" id="placeEvent" name="placeEvent" class="fields" required>
+                </p>
+
+                <p class="item">
+                    <label>Формат мероприятия (краткое описание)</label>
+                    <input type="text" id="descEvent" name="descEvent" class="fields"  required>
+                </p>
+
+                <p class="item">
+                    <label>Для кого</label>
+                    <input type="text" id="forEvent" name="forEvent" class="fields" required>
+                </p>
+
+                <p class="item">
+                    <label> Количество участников </label>
+                    <input type="text" class="fields" id="amountEvent" name="amountEvent" placeholder="Обучающиеся Кванториума/Матрицы/других организаций" required>
+                </p>
+
+                <p class="item">
+                    <label>Приглашенные спикеры/гости/заказчики/специалисты</label>
+                    <input type="text" class="fields" id="guestsEvent" name="guestsEvent">
+                </p>
+
+                <p class="item">
+                    <label>Ссылка на пресс-релиз в социальных сетях</label>
+                    <input type="text" id="refEvent" name="refEvent" class="fields" required>
+                </p>
+
+            </fieldset>
+
+
+        </fieldset>
+
+            <button class="btn btn-success" type="submit"> Выгрузить отчет </button>
+    </form>
+
+
+
+</body>
+</html>

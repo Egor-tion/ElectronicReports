@@ -1,0 +1,72 @@
+<?php include("../backend/func/1.php")?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Account</title>
+    <link rel="stylesheet" href="./css/personal.css">
+    <script src="./js/personal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+            <header>
+                <div class="name_page">Личный кабинет</div>
+                <div class="header_list">
+                    <a href="../backend/exit.php" class="header_link">Выход</a>
+            </div>
+            </header>
+
+            <div class="info">
+                <?php include("../backend/func/personal.php")?>
+            </div>
+
+            <div class="reports">
+                <h1>Админ:</h1>
+
+                
+
+								<p>
+                    <a href="./register0.html" class="header_link"> Создание нового пользователя</a>
+                </p>
+
+								<p>
+                    <a href="./childrenListAd.html" class="header_link"> Обучаемые</a>
+                </p>
+
+                <h1>Формы отчетности:</h1>
+
+                <p>
+                    <a href="./listOfGroups.html" class="reports_link"> Список обучающихся группы</a>
+                </p>
+
+                <p>
+                    <a href="./eventsForm.html" class="reports_link"> Отчёт о проведении иных мероприятий</a>
+                </p>
+
+                <p>
+                    <a href="./analitycsForm.html" class="reports_link"> Аналитический отчёт о проведении мероприятий</a>
+                </p>
+            </div>
+
+            <div class="programms">
+
+                <div class="searcher">
+                    <img src="./img/loupe.png" alt="Поиск">
+                    <input type="text" class="search" id="input" autofocus>
+                    <a href="./newprogram.html"><img src="./img/add.png" alt="Добавить"></a>
+                </div>
+
+                <ol class="for-ul">
+                  <?php include("../backend/func/personal3.php")?>
+                </ol>
+            </div>
+      </div>
+
+
+
+</body>
+</html>
