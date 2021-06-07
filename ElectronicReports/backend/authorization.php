@@ -13,7 +13,8 @@
     $result = $mysql->query("SELECT * FROM `userss` WHERE `Login` = '$login'
       AND `Password` = '$password'");
     $resultUser = $result->fetch_assoc();
-    if(count($resultUser) == 0) {
+    $otvet = empty($resultUser);
+    if($otvet) {
       $_SESSION['aut'] = 1;
       header('Location: ../index.html');
     }

@@ -46,23 +46,23 @@
           if($trfl) {
             $_SESSION['aut'] = 3;
             header('Location: ../../frontend/setprogram.html'); // Если преподаватель введён неверно
-          }
+          } else {
+            $chtoza = intval($kostil["user_id"]);
+            $tr= $chtoza != $id;
 
-          $chtoza = intval($kostil["user_id"]);
-          $tr= $chtoza != $id;
+            if ($chtoza == intval($id)) // Если ввел сам себя
+            {
+              $_SESSION['aut'] = 3;
+              header('Location: ../../frontend/setprogram.html');
+            } else { // Если всё ок
+              $secId = $kostil["user_id"];
 
-          if ($chtoza == intval($id)) // Если ввел сам себя
-          {
-            $_SESSION['aut'] = 3;
-            header('Location: ../../frontend/setprogram.html');
-          } else { // Если всё ок
-            $secId = $kostil["user_id"];
+              $mysql->query("INSERT INTO `userproglink` (`program_id`, `user_id`) VALUES('$prog_id', '$secId')");
 
-            $mysql->query("INSERT INTO `userproglink` (`program_id`, `user_id`) VALUES('$prog_id', '$secId')");
-
-            $mysql->close();
-            $_SESSION['aut'] = 0;
-            header('Location: ../../frontend/program.html');
+              $mysql->close();
+              $_SESSION['aut'] = 0;
+              header('Location: ../../frontend/program.html');
+            }
           }
         } else {
           $_SESSION['aut'] = 3;
