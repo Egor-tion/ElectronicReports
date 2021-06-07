@@ -7,8 +7,8 @@
   $pols = $mysql->query("SELECT * FROM `userss` WHERE `user_id` = '$id'");
   $kostil = $pols->fetch_assoc();
 
-  echo "<p>".$kostil["Name"]." ".$kostil["Lastname"]." ".$kostil["Fathers_name"]."</p>
-  <p>Должность:".$kostil["Post"]."</p>
+  echo "<p>".$kostil["Lastname"]." ".$kostil["Name"]." ".$kostil["Fathers_name"]."</p>
+  <p>Должность: ".$kostil["Post"]."</p>
   <p>Дата начала работы: ".$kostil["EmploymentDate"]."</p>";
 
   $_SESSION['aut'] = 0; // Проверка всплывашки
